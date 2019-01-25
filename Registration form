@@ -4,7 +4,7 @@
 <head>
     <title>Registration</title>
     <link rel="stylesheet" href="reg.css">
-    <link rel="text/javascript" href="formvalidity.js">
+    <script type="text/javascript" src="formvalidity.js"></script>
 </head>
 
 <body>
