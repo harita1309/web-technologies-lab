@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="text/javascript" href="formvalidity.js">
+</head>
+
+<body>
+    1602-16-737-014
+    <h3 align ="center">Registration</h3>
+    <form method="post" name="rform" onsubmit="return validation()">
+        <table id="outer" align="center">
+            <tr>
+                <td>
+                    <label name="firstname">FIRST NAME</label></td>
+                <td><input name="firstname" type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="lastname">LAST NAME</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label name="dob">DATE OF BIRTH</label></td>
+                <td><select>
+                        <option>day</option>
+                    </select>
+                    <select>
+                        <option>month</option>
+
+                    </select>
+                    <select>
+                        <option>year</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="email">EMAIL</label></td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="password">PASSWORD</label></td>
+                <td> <input type="password"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label name="gender">GENDER</label></td>
+                <td> <input type="radio" value="male" name="gender">MALE
+                    <input type="radio" value="female" name="gender">FEMALE</td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="hobby">HOBBIES</label></td>
+                <td><input type="checkbox" value="drawing">Drawing
+                    <input type="checkbox" value="singing">Singing
+                    <input type="checkbox" value="dancing">Dancing
+                    <input type="text"> </td>
+            </tr>
+            <tr>
+                <td><label name="qual">QUALIFICTAION</label></td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>S.NO.</th>
+                            <th>EXAM</th>
+                            <th>board</th>
+                            <th>percentage</th>
+                            <th>year</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>CLASS X</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CLASS X11</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+
+                        </tr>
+
+
+                    </table>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><label name="course">COURSES APPLIED FOR</label></td>
+                <td><input type="radio" name="course">BE
+                    <input type="radio" name="course">MCA</td>
+            </tr>
+
+        </table>
+        <p id="button">
+        <button type="submit">Submit</button>
+            <button type="Reset">Reset</button></p>
+
+    </form>
+
+    
+        
+    
+    
+
+
+
+</body>
