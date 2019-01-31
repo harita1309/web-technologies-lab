@@ -1,0 +1,12 @@
+form{
+	background-color:aqua;
+	width: 900px;
+	margin-left: 15%;
+	padding-top: 2px;
+}
+#outer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
