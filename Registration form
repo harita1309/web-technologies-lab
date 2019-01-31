@@ -1,68 +1,178 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Registration</title>
     <link rel="stylesheet" href="reg.css">
-    <script type="text/javascript" src="formvalidity.js"></script>
+    <script type="text/javascript">
+        function valid(){
+            var letters = /^[a-zA-Z]+$/;
+            var digits = /^[0-9]+$/;
+            var fname=document.forms["rform"]["fname"];
+            var lname=document.forms["rform"]["lastname"];
+            var gender=document.forms["rform"]["gender"];
+            var hobby = document.forms["rform"]["hobby"];
+            var city = document.forms["rform"]["city"];
+            var state=document.forms["rform"]["state"];
+            var country = document.forms["rform"]["country"];
+            var pincode = document.forms["rform"]["pincode"];
+            var mobile = document.forms["rform"]["mobile"]; 
+            //country.value="India";
+            if(fname.value=="" || fname.value.length>30||!fname.value.match(letters)){
+                window.alert("Modify the first name");
+               fname.focus();
+                return false;
+            }
+            if(lname.value=="" || lname.value.length>30||!lname.value.match(letters)){
+                window.alert("Modify the last name");
+                lname.focus();
+                return false;
+            }
+            if(gender.value!="male" && gender.value!="female"){
+                window.alert("please select a gender");
+                gender.focus();
+                return false;
+            }
+            if(hobby.value!="singing"&&hobby.value!="dancing"&&hobby.value!="drawing"){
+                window.alert("please select a hobby");
+                hobby.focus();
+                return false;
+            }
+            if(city.value==""||city.value.length>30||!city.value.match(digits)){
+                window.alert("Modify the city");
+                city.focus();
+                return false;
+            }
+            if(state.value=""||state.value.length>10||!state.value.match(letters)){
+                window.alert("Modify the state");
+                state.focus();
+                return false;
+            }
+            if(mobile.value=""||mobile.value.length>10||!mobile.value.match(digits)){
+                window.alert("Modify the mobile nummber");
+                country.focus();
+                return false;
+            } 
+            if(pincode.value=""||pincode.value.length>6||!pincode.value.match(digits)){
+                window.alert("Modify the pincode");
+                country.focus();
+                return false;   
+            }
+
+            return true;
+        }
+    </script>
+
 </head>
 
 <body>
-    1602-16-737-014
+    <p>1602-16-737-014</p>
+    <p id="demo"></p>
     <h3 align ="center">Registration</h3>
-    <form method="post" name="rform" onsubmit="return validation()">
+    <form name="rform"  id = "rform" onsubmit="return valid()" method="post">
         <table id="outer" align="center">
             <tr>
                 <td>
-                    <label name="firstname">FIRST NAME</label></td>
-                <td><input name="firstname" type="text"></td>
+                    <label>FIRST NAME</label>
+                </td>
+                <td>
+                    <input name="fname" type="text">
+                </td>
             </tr>
             <tr>
                 <td>
-                    <label name="lastname">LAST NAME</label></td>
-                <td><input type="text"></td>
+                    <label>LAST NAME</label></td>
+                <td><input name ="lastname" type="text"></td>
             </tr>
             <tr>
                 <td><label name="dob">DATE OF BIRTH</label></td>
                 <td><select>
                         <option>day</option>
+                        <option>13</option>
                     </select>
                     <select>
                         <option>month</option>
-
+                        <option>september</option>
                     </select>
                     <select>
                         <option>year</option>
+                        <option>1998</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <label name="email">EMAIL</label></td>
-                <td><input type="email"></td>
+                <td><label>Mobile Number</label></td>
+                <td><input type="text" name="mobile"></td>
             </tr>
             <tr>
                 <td>
-                    <label name="password">PASSWORD</label></td>
-                <td> <input type="password"></td>
+                    <label>EMAIL</label></td>
+                <td><input name="mail" type="email" ></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>PASSWORD</label></td>
+                <td> <input type="password" minlength="8"></td>
             </tr>
 
             <tr>
                 <td>
-                    <label name="gender">GENDER</label></td>
+                    <label>GENDER</label></td>
                 <td> <input type="radio" value="male" name="gender">MALE
                     <input type="radio" value="female" name="gender">FEMALE</td>
             </tr>
             <tr>
                 <td>
-                    <label name="hobby">HOBBIES</label></td>
-                <td><input type="checkbox" value="drawing">Drawing
-                    <input type="checkbox" value="singing">Singing
-                    <input type="checkbox" value="dancing">Dancing
-                    <input type="text"> </td>
+                    <label>Address</label>
+                </td>
+                <td>
+                    <textarea rows="4" cols="30"></textarea>
+                </td>
             </tr>
             <tr>
-                <td><label name="qual">QUALIFICTAION</label></td>
+                <td>
+                    <label>City</label>
+                </td>
+                <td>
+                    <input type="text" name="city">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>State</label>
+                </td>
+                <td>
+                    <input type-"text" name="state">
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <label>Country</label>
+                </td>
+                <td>
+                    <input type="text" value="India" name = "country">
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <label>Pincode</label>
+                </td>
+                <td>
+                    <input type="text" name="pincode">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>HOBBIES</label></td>
+                <td><input type="checkbox" value="drawing" name="hobby">Drawing
+                    <input type="checkbox" value="singing" name="hobby">Singing
+                    <input type="checkbox" value="dancing" name="hobby">Dancing
+                    <input type="text" name="hobby"> </td>
+            </tr>
+            <tr>
+                <td><label>QUALIFICTAION</label></td>
                 <td>
                     <table>
                         <tr>
@@ -75,16 +185,16 @@
                         <tr>
                             <td>1</td>
                             <td>CLASS X</td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input name = "board" type="text"></td>
+                            <td><input name="percentage" type="text"></td>
+                            <td><input name="year" type="text"></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>CLASS X11</td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input name = "board"  type="text"></td>
+                            <td><input name="percentage" type="text"></td>
+                            <td><input name="year" type="text"></td>
 
                         </tr>
 
@@ -95,23 +205,14 @@
             </tr>
 
             <tr>
-                <td><label name="course">COURSES APPLIED FOR</label></td>
+                <td><label>COURSES APPLIED FOR</label></td>
                 <td><input type="radio" name="course">BE
                     <input type="radio" name="course">MCA</td>
             </tr>
 
         </table>
-        <p id="button">
-        <button type="submit">Submit</button>
-            <button type="Reset">Reset</button></p>
-
+        <p style="text-align: center"><input type="submit" value="Submit" name="Submit">   
+        <input type="reset" value="Reset" name="Reset"> 
     </form>
-
-    
-        
-    
-    
-
-
-
-</body>
+    </body>
+</html>
