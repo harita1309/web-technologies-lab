@@ -1,0 +1,36 @@
+.upperjumbo{
+    background-image: url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80");
+    background-size: cover;
+}
+.jumbotext{
+    text-align: center;
+}
+.uptext{
+    color:white;
+}
+
+.upbutton{
+    height: 30px;padding-bottom:30px;
+}
+.secdiv{
+    text-align: center;
+}
+.dessec{
+    height: 450px;
+}
+.desserts{
+    width: 240px;
+    height: 300px;
+    border-radius: 8px;
+}
+.imgdef{
+    text-align: center;
+    width: 240px;
+}
+.downjumbo{
+    background-color: tan;
+    height: auto;
+}
+.lowbutton{
+    text-align: center;
+}
