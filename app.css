@@ -1,0 +1,38 @@
+.toplinks{
+     background-color: chocolate;
+}
+.orbit-wrapper{
+    height: 300px;
+}
+.carbtn{
+    height:6px;width:6px;
+}
+.callout{
+    background-color: white;
+    text-align: center;
+}
+.firsthead{
+    font-size: 2rem;
+   
+}
+.fclout{
+    background-color: chocolate;
+}
+.secclout{
+    padding: 0px;height: 128px;
+}
+.sechead{
+    font-size=0.8rem;
+}
+.lastclout{
+    background-color: chocolate;
+}
+.lastpara1{
+    font-size: 2rem;
+}
+.lastpara2{
+    font-size: 1rem;
+}
+.card{
+    width: 650px;border: None;
+}
